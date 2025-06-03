@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThisosForYou</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Italianno&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Alyaa, Would you be mine?</h1>
+        <h2>And This Is 10 Reasons Why I'm A Good Boyfriend</h2>
+        <ol>
+            <li>I always love my love❤️</li>
+            <li>Always responsive😄</li>
+            <li>I'm very loyal👑</li>
+            <li>We can play games together☺️</li>
+            <li>I'm very obsessed with you🤭</li>
+            <li>I'm not cheating😡</li>
+            <li>Always here to wait for your chat📲</li>
+            <li>Stop my chat to reply to your chat📱</li>
+            <li>I'm not interested in another girl except you❤️</li>
+            <li>Because I like you, I love you, Te amo, Me gustas <br><span class="code-block">print ("ACCEPT ME!")</span></li>
+        </ol>
+
+        <div class="buttons">
+            <button id="acceptButton" onclick="location.href='accept.html'">Accept</button>
+            <button id="notButton">Not?</button>
+        </div>
+    </div>
+
+    <script>
+        const notButton = document.getElementById('notButton');
+        let clickCount = 0;
+
+        notButton.addEventListener('mouseover', () => {
+            if (clickCount < 1) { // Only move if not clicked yet
+                const x = Math.random() * (window.innerWidth - notButton.offsetWidth - 50); // 50 is a buffer
+                const y = Math.random() * (window.innerHeight - notButton.offsetHeight - 50); // 50 is a buffer
+                notButton.style.position = 'absolute';
+                notButton.style.left = x + 'px';
+                notButton.style.top = y + 'px';
+            }
+        });
+
+        notButton.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 1) {
+                notButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

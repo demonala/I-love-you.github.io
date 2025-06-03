@@ -1,0 +1,139 @@
+body {
+    font-family: 'Italianno', cursive; /* General text font */
+    background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+    color: #5C3317;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Alex Brush', cursive; /* New Font for H1 */
+    font-size: 4.8em; /* Adjusted for Alex Brush */
+    color: #d6336c;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive; /* Dancing Script for H2 */
+    font-size: 2.5em;
+    color: #c2185b;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+ol {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: left;
+    font-family: 'Dancing Script', cursive; /* Dancing Script for list items */
+    font-size: 1.8em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #795548;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.code-block {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fce4ec;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #ad1457;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button, .chat-button {
+    font-family: 'Dancing Script', cursive; /* Dancing Script for buttons */
+    font-size: 1.8em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#acceptButton, .chat-button {
+    background-color: #e91e63;
+    color: white;
+}
+
+#acceptButton:hover, .chat-button:hover {
+    background-color: #d81b60;
+    transform: translateY(-2px);
+}
+
+#notButton {
+    background-color: #f8bbd0;
+    color: #c2185b;
+}
+
+#notButton:hover {
+    background-color: #f48fb1;
+    transform: translateY(-2px);
+}
+
+.accept-page h1 {
+    font-family: 'Alex Brush', cursive; /* Consistency on accept page */
+    font-size: 4em; /* Adjusted for Alex Brush */
+}
+
+.accept-page h2 {
+    font-family: 'Dancing Script', cursive; /* Consistency on accept page */
+    font-size: 2.2em;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        font-size: 3.2em; /* Adjusted for Alex Brush */
+    }
+    h2 {
+        font-size: 2em;
+    }
+    ol {
+        font-size: 1.5em;
+    }
+    button, .chat-button {
+        font-size: 1.6em;
+        padding: 10px 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+}
