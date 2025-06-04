@@ -11,6 +11,58 @@
     <div class="container accept-page">
         <h1>OMGG, THANKS GOD YOU ACCEPT💘💘😻</h1>
         <h2>CHAT ME IF CLICK ACCEPT😽</h2>
-        </div>
+
+        <audio id="specialSong" loop>
+            <source src="special_song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="playSongButton" class="song-button">
+            🎶 Play Our Special Song 💖
+        </button>
+        <p id="autoplay-notice" style="font-size: 0.9em; color: #777; display: none;">
+            (If music doesn't play, click the button above!)
+        </p>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const song = document.getElementById('specialSong');
+            const playButton = document.getElementById('playSongButton');
+            const autoplayNotice = document.getElementById('autoplay-notice');
+
+            // Try to autoplay
+            song.play().then(() => {
+                // Autoplay started!
+                playButton.textContent = '🔊 Music Playing (Pause?)';
+            }).catch(error => {
+                // Autoplay was prevented.
+                console.log("Autoplay prevented: ", error);
+                playButton.textContent = '🎶 Play Our Special Song 💖';
+                autoplayNotice.style.display = 'block'; // Show the notice
+            });
+
+            // Add functionality to the play button
+            playButton.addEventListener('click', function() {
+                if (song.paused) {
+                    song.play().then(() => {
+                        playButton.textContent = '🔊 Music Playing (Pause?)';
+                        autoplayNotice.style.display = 'none'; // Hide notice if manually played
+                    }).catch(error => {
+                         console.log("Manual play failed: ", error);
+                         // This case is rarer but good to log
+                    });
+                } else {
+                    song.pause();
+                    playButton.textContent = '🎶 Play Our Special Song 💖';
+                }
+            });
+
+            // Optional: If you want the song to loop
+            song.loop = true;
+        });
+    </script>
 </body>
 </html>
+
